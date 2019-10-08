@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Moving Box </title>
+    </head>
+    <style>
+        #myobj {
+            background-color: aqua;
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+    </style>
+    <body>
+        <div id="myobj"> &nbsp; </div>
+    </body>
+    <script>
+        var hori = 0;
+        var veri = 0;    
+        document.addEventListener('keydown', function(e) {
+            var obj = document.getElementById('myobj');
+            switch(e.keyCode) {
+                case 37: 
+                    console.log('LEFT');
+                    hori -= 10;
+                    obj.style.left = hori + 'px';
+                    obj.textContent = obj.offsetLeft+', '+obj.offsetTop;
+                    break;
+                case 38: 
+                    console.log('UP');
+                    veri -= 10;
+                    obj.style.top = veri + 'px';
+                    obj.textContent = obj.offsetLeft+', '+obj.offsetTop;
+                    break;
+                case 39: 
+                    console.log('RIGHT');
+                    hori += 10;
+                    obj.style.left = hori + 'px';
+                    obj.textContent = obj.offsetLeft+', '+obj.offsetTop;
+                    break;
+                case 40: 
+                    console.log('DOWN');
+                    veri += 10;
+                    obj.style.top = veri + 'px';
+                    obj.textContent = obj.offsetLeft+', '+obj.offsetTop;
+                    break;
+            }
+        });
+    </script>
+</html>

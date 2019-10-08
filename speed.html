@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Speed Calculator </title>
+    </head>
+    <body>
+        <div style="text-align: center; margin-top: 40px;">
+            <table style="margin-left:auto;margin-right:auto;"> 
+                <tbody>           
+                    <tr>
+                        <td> <label> Jarak </label> </td>
+                        <td> <input type=text id="jarak"> </td>
+                        <td> m </td>
+                    </tr>
+                    <tr>
+                        <td> <label> Waktu </label> </td>
+                        <td><input type=text id="waktu"> </td>
+                        <td> s </td>
+                    </tr>
+                    <tr>
+                        <td> <label> Kecepatan </label> </td>
+                        <td><input type=text readonly id="kecepatan"> </td>
+                        <td> m/s </td>
+                    </tr>
+                    <tr>
+                        <td><button id="btn_hitung" style="margin-top: 15px; margin-left: 30px;"> hitung </button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    <script type='text/javascript'>
+        var btn_hitung = document.getElementById('btn_hitung').addEventListener("click", () => {
+            var distance = document.getElementById('jarak').value;
+            var times = document.getElementById('waktu').value;
+            var kecepatan =  document.getElementById('kecepatan');
+            kecepatan.value = (distance/times);
+        });
+    </script>
+</html>
