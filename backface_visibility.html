@@ -17,10 +17,11 @@
             margin-right: auto;
             transition: transform 1.5s;
             /* backface-visibility: hidden; */
+            transform-origin: right; /* right left center */
         }
 
         .rotate {
-            transform: rotateY(180deg);
+            transform: translateX(-100%) rotateY(-180deg);
         }
     </style>
     <body>
