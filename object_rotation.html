@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Object Rotation </title>
+    </head>
+    <style>
+        .center {
+            background-color: bisque;            
+            text-align: center;                       
+            vertical-align: middle;
+            margin-top: 20%;
+        }
+
+        .obj{
+            background-color: rgb(22, 223, 56);
+            display: inline-block;
+            border-radius: 50%;
+            height: 24px;
+            width: 35px;
+            vertical-align: middle;
+            padding-top: 6px;
+        }
+        .css {
+            background-color: aquamarine;
+            display: inline-block;
+            border-radius: 50%;
+            height: 24px;
+            width: 35px;
+            vertical-align: middle;
+            padding-top: 6px;            
+            transform:  rotate(45deg) translateX(150px);
+            animation: orbit2 4s linear infinite;
+        }
+
+        .js {
+            background-color: rebeccapurple;
+            display: inline-block;
+            border-radius: 50%;
+            height: 24px;
+            width: 35px;
+            vertical-align: middle;
+            padding-top: 6px;            
+            transform:  rotate(45deg) translateX(180px);
+            animation: orbitjs 6s linear infinite;
+        }
+
+        .html {
+            position: absolute;
+            top: 100px;
+            left: 500px;
+            background-color: rgb(202, 223, 14);
+            display: inline-block;
+            border-radius: 50%;
+            height: 29px;
+            width: 51px;
+            vertical-align: middle;
+            padding-top: 9px;
+            transform:  rotate(45deg) translateX(-180px);
+            animation: orbithtml 6s linear infinite;
+        }
+
+
+        @keyframes orbit2 {
+            from { 	transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   {  transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @keyframes orbitjs {
+            from { 	transform: rotate(360deg) translateX(180px) rotate(-2600deg); }
+            to   {  transform: rotate(0deg) translateX(180px) rotate(0deg); }
+        }
+
+        @keyframes orbithtml {
+            from { 	transform: rotate(360deg) translateX(-180px) rotate(-360deg); }
+            to   {  transform: rotate(0deg) translateX(-180px) rotate(0deg); }
+        }
+    </style>
+    <body>
+        <div class="center">
+            <div class="obj">ate</div>
+            <div class="css">CSS</div>
+            <div class="js">JS</div>
+            <div class="html">HTML</div>
+        </div>        
+    </body>
+</html>
