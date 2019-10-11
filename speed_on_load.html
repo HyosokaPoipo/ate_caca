@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Speed Calculator </title>
+    </head>    
+    <script type='text/javascript'>
+        window.onload = function () {
+            var btn_hitung = document.getElementsByName('btn_hitung')[0].addEventListener("click", () => {
+                var distance = document.getElementsByName('jarak')[0];
+                var times = document.getElementsByName('waktu')[0];
+                var kecepatan =  document.getElementsByName('kecepatan')[0];
+                kecepatan.value = (distance.value/times.value);
+             });
+        }
+        
+    </script>
+    <body>
+        <div style="text-align: center; margin-top: 40px;">
+            <table style="margin-left:auto;margin-right:auto;"> 
+                <tbody>           
+                    <tr>
+                        <td> <label> Jarak </label> </td>
+                        <td> <input type=text name="jarak"> </td>
+                        <td> m </td>
+                    </tr>
+                    <tr>
+                        <td> <label> Waktu </label> </td>
+                        <td><input type=text name="waktu"> </td>
+                        <td> s </td>
+                    </tr>
+                    <tr>
+                        <td> <label> Kecepatan </label> </td>
+                        <td><input type=text readonly name="kecepatan"> </td>
+                        <td> m/s </td>
+                    </tr>
+                    <tr>
+                        <td><button name="btn_hitung" style="margin-top: 15px; margin-left: 30px;"> hitung </button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
